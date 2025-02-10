@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Last-Minute Valentine’s Surprise</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fff5f5;
+            text-align: center;
+            color: #d50000;
+            position: relative;
+            overflow: hidden;
+        }
+        h1 { color: #ff1744; }
+        .container {
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+        .product {
+            border-bottom: 1px solid #ddd;
+            padding: 15px;
+        }
+        img {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+        button {
+            background-color: green;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .whatsapp-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #25D366;
+            color: white;
+            padding: 15px;
+            border-radius: 50%;
+            font-size: 20px;
+            text-decoration: none;
+        }
+        .floating-hearts {
+            position: fixed;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100%;
+            height: 100px;
+            overflow: hidden;
+            pointer-events: none;
+        }
+        .heart {
+            position: absolute;
+            bottom: -10px;
+            width: 20px;
+            height: 20px;
+            background-color: red;
+            clip-path: polygon(50% 0%, 100% 40%, 80% 100%, 50% 75%, 20% 100%, 0% 40%);
+            animation: floatUp 5s infinite ease-in-out;
+        }
+        @keyframes floatUp {
+            0% { transform: translateY(0) scale(1); opacity: 1; }
+            100% { transform: translateY(-100vh) scale(0.5); opacity: 0; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Last-Minute Valentine’s Surprises ❤️</h1>
+        <p><strong>Limited Slots – Pre-Book Now!</strong></p>
+        
+        <div class="product">
+            <img src="gift_hamper.jpg" alt="Gift Hamper">
+            <h3>Gift Hamper (₹2,499)</h3>
+            <p>Roses + Premium Chocolates + Teddy</p>
+            <button onclick="bookNow('Gift Hamper')">Book Now</button>
+        </div>
+        
+        <div class="product">
+            <img src="date_setup.jpg" alt="Date Setup">
+            <h3>Date Setup (₹4,999)</h3>
+            <p>Your Home/Terrace Decor</p>
+            <button onclick="bookNow('Date Setup')">Book Now</button>
+        </div>
+        
+        <div class="product">
+            <img src="luxury_flower_box.jpg" alt="Luxury Flower Box">
+            <h3>Luxury Flower Box (₹7,999)</h3>
+            <p>Roses + Wine Glasses</p>
+            <button onclick="bookNow('Luxury Flower Box')">Book Now</button>
+        </div>
+        
+        <div class="product">
+            <img src="proposal_package.jpg" alt="Proposal Package">
+            <h3>Proposal Package (₹15,000)</h3>
+            <p>Decor + Music + Flowers + Cake</p>
+            <button onclick="bookNow('Proposal Package')">Book Now</button>
+        </div>
+    </div>
+
+    <a href="https://wa.me/8686147244" class="whatsapp-button">📩</a>
+
+    <div class="floating-hearts">
+        <div class="heart" style="left: 10%; animation-duration: 4s;"></div>
+        <div class="heart" style="left: 30%; animation-duration: 5s;"></div>
+        <div class="heart" style="left: 50%; animation-duration: 6s;"></div>
+        <div class="heart" style="left: 70%; animation-duration: 4.5s;"></div>
+        <div class="heart" style="left: 90%; animation-duration: 5.5s;"></div>
+    </div>
+
+    <script>
+        function bookNow(product) {
+            let phoneNumber = prompt("Enter your phone number for booking confirmation:");
+            if (phoneNumber) {
+                window.location.href = `https://wa.me/8686147244?text=I want to book: ${product} for Valentine's Day. My phone number is ${phoneNumber}.`;
+            }
+        }
+    </script>
+</body>
+</html>
