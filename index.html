@@ -131,11 +131,10 @@
                 "name": "Valentine’s Booking",
                 "description": "Payment for " + product,
                 "image": "your_logo_url",
-               "handler": function (response) {
-    alert("Payment Successful! Transaction ID: " + response.razorpay_payment_id);
-    window.location.href = `https://wa.me/8686147244?text=I have paid for: ${product}. Transaction ID: ${response.razorpay_payment_id}`;
-}
-
+                "handler": function (response) {
+                    alert("Payment Successful! Transaction ID: " + response.razorpay_payment_id);
+                    window.location.href = `https://wa.me/8686147244?text=I have paid for: ${product}. Transaction ID: ${response.razorpay_payment_id}`;
+                },
                 "prefill": {
                     "contact": "", 
                     "email": ""
