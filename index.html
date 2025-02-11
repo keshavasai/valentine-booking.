@@ -27,11 +27,22 @@
         .product {
             border-bottom: 1px solid #ddd;
             padding: 15px;
+            position: relative;
         }
         img {
             width: 100%;
             border-radius: 10px;
             margin-bottom: 10px;
+        }
+        .price {
+            color: #888;
+            text-decoration: line-through;
+            font-size: 14px;
+        }
+        .discounted-price {
+            color: #ff1744;
+            font-size: 18px;
+            font-weight: bold;
         }
         button {
             background-color: green;
@@ -47,6 +58,16 @@
             color: #444;
             margin-top: 5px;
         }
+        .flash-sale {
+            position: absolute;
+            top: 5px;
+            left: 5px;
+            background: red;
+            color: white;
+            padding: 5px;
+            font-size: 12px;
+            border-radius: 5px;
+        }
         .whatsapp-button {
             position: fixed;
             bottom: 20px;
@@ -58,103 +79,65 @@
             font-size: 20px;
             text-decoration: none;
         }
-        .floating-hearts {
-            position: fixed;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 100%;
-            height: 100px;
-            overflow: hidden;
-            pointer-events: none;
-        }
-        .heart {
-            position: absolute;
-            bottom: -10px;
-            width: 20px;
-            height: 20px;
-            background-color: red;
-            clip-path: polygon(50% 0%, 100% 40%, 80% 100%, 50% 75%, 20% 100%, 0% 40%);
-            animation: floatUp 5s infinite ease-in-out;
-        }
-        @keyframes floatUp {
-            0% { transform: translateY(0) scale(1); opacity: 1; }
-            100% { transform: translateY(-100vh) scale(0.5); opacity: 0; }
-        }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>Last-Minute Valentine’s Surprises ❤️</h1>
         <p><strong>Limited Slots – Pre-Book Now! Serving only in Hyderabad!</strong></p>
+        <img src="https://i.gifer.com/7VE.gif" width="100%" alt="Flash Sale GIF">
         
         <div class="product">
-            <img src="https://i.pinimg.com/736x/6f/98/40/6f98406c2bf222b6cfaab84e4db98dc7.jpg" alt="Big 5 Feet Teddy Bear">
-            <h3>Big 5 Feet Teddy Bear (₹8,999)</h3>
-            <p>Limited Pieces Available!</p>
+            <span class="flash-sale">Flash Sale!</span>
+            <img src="big_teddy.jpg" alt="Big 5 Feet Teddy Bear">
+            <h3>Big 5 Feet Teddy Bear</h3>
+            <p class="price">₹10,999</p>
+            <p class="discounted-price">₹8,999</p>
             <button onclick="payNow('Big 5 Feet Teddy Bear', 8999)">Pay Now</button>
             <p class="review">⭐ 4.5 (Hyderabad) - "Absolutely loved it! So soft and big!"</p>
         </div>
 
         <div class="product">
-            <img src="https://i.pinimg.com/474x/f7/78/2a/f7782ad042f05d4b4e5ec2ccfdb7d1ee.jpg" alt="Gift Hamper">
-            <h3>Gift Hamper (₹2,499)</h3>
-            <p>Roses + Premium Chocolates + Teddy</p>
+            <span class="flash-sale">Flash Sale!</span>
+            <img src="gift_hamper.jpg" alt="Gift Hamper">
+            <h3>Gift Hamper</h3>
+            <p class="price">₹4,499</p>
+            <p class="discounted-price">₹2,499</p>
             <button onclick="payNow('Gift Hamper', 2499)">Pay Now</button>
             <p class="review">⭐ 4.5 (Secunderabad) - "Best surprise gift ever!"</p>
         </div>
         
         <div class="product">
-            <img src="https://i.pinimg.com/736x/7c/8c/cb/7c8ccbff115db3f91739cc3ca76a18b1.jpg" alt="Date Setup">
-            <h3>Date Setup (₹4,999)</h3>
-            <p>Your Home/Terrace Decor</p>
+            <span class="flash-sale">Flash Sale!</span>
+            <img src="date_setup.jpg" alt="Date Setup">
+            <h3>Date Setup</h3>
+            <p class="price">₹6,999</p>
+            <p class="discounted-price">₹4,999</p>
             <button onclick="payNow('Date Setup', 4999)">Pay Now</button>
             <p class="review">⭐ 4.5 (Madhapur) - "Beautiful and romantic setup!"</p>
         </div>
         
         <div class="product">
-            <img src="https://i.pinimg.com/474x/1a/cf/45/1acf45f0378006394bb36e253946029e.jpg" alt="Luxury Flower Box">
-            <h3>Luxury Flower Box (₹7,999)</h3>
-            <p>Roses + Wine Glasses</p>
+            <span class="flash-sale">Flash Sale!</span>
+            <img src="luxury_flower_box.jpg" alt="Luxury Flower Box">
+            <h3>Luxury Flower Box</h3>
+            <p class="price">₹9,999</p>
+            <p class="discounted-price">₹7,999</p>
             <button onclick="payNow('Luxury Flower Box', 7999)">Pay Now</button>
             <p class="review">⭐ 4.5 (Kondapur) - "Elegant and worth the price!"</p>
         </div>
         
         <div class="product">
-            <img src="https://i.pinimg.com/736x/f7/61/22/f761226b2fa1b2c740ab421304e6c984.jpg" alt="Proposal Package">
-            <h3>Proposal Package (₹15,000)</h3>
-            <p>Decor + Music + Flowers + Cake</p>
+            <span class="flash-sale">Flash Sale!</span>
+            <img src="proposal_package.jpg" alt="Proposal Package">
+            <h3>Proposal Package</h3>
+            <p class="price">₹17,000</p>
+            <p class="discounted-price">₹15,000</p>
             <button onclick="payNow('Proposal Package', 15000)">Pay Now</button>
             <p class="review">⭐ 4.5 (Gachibowli) - "Made my proposal magical!"</p>
         </div>
     </div>
 
     <a href="https://wa.me/8686147244" class="whatsapp-button">📩</a>
-
-    <script>
-        function payNow(product, amount) {
-            var options = {
-                "key": "rzp_live_bYlAm02qCSZjDJ", 
-                "amount": amount * 100,
-                "currency": "INR",
-                "name": "Valentine’s Booking",
-                "description": "Payment for " + product,
-                "image": "your_logo_url",
-                "handler": function (response) {
-                    alert("Payment Successful! Transaction ID: " + response.razorpay_payment_id);
-                    window.location.href = `https://wa.me/8686147244?text=I have paid for: ${product}. Transaction ID: ${response.razorpay_payment_id}`;
-                },
-                "prefill": {
-                    "contact": "", 
-                    "email": ""
-                },
-                "theme": {
-                    "color": "#ff1744"
-                }
-            };
-            var rzp1 = new Razorpay(options);
-            rzp1.open();
-        }
-    </script>
 </body>
 </html>
