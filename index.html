@@ -42,6 +42,11 @@
             border-radius: 5px;
             font-size: 16px;
         }
+        .review {
+            font-size: 14px;
+            color: #444;
+            margin-top: 5px;
+        }
         .whatsapp-button {
             position: fixed;
             bottom: 20px;
@@ -81,46 +86,50 @@
 <body>
     <div class="container">
         <h1>Last-Minute Valentine’s Surprises ❤️</h1>
-        <p><strong>Limited Slots – Pre-Book Now!</strong></p>
+        <p><strong>Limited Slots – Pre-Book Now! Serving only in Hyderabad!</strong></p>
         
+        <div class="product">
+            <img src="big_teddy.jpg" alt="Big 5 Feet Teddy Bear">
+            <h3>Big 5 Feet Teddy Bear (₹8,999)</h3>
+            <p>Limited Pieces Available!</p>
+            <button onclick="payNow('Big 5 Feet Teddy Bear', 8999)">Pay Now</button>
+            <p class="review">⭐ 4.5 (Hyderabad) - "Absolutely loved it! So soft and big!"</p>
+        </div>
+
         <div class="product">
             <img src="gift_hamper.jpg" alt="Gift Hamper">
             <h3>Gift Hamper (₹2,499)</h3>
             <p>Roses + Premium Chocolates + Teddy</p>
-            <button onclick="payNow('Gift Hamper', 10)">Pay Now</button>
+            <button onclick="payNow('Gift Hamper', 2499)">Pay Now</button>
+            <p class="review">⭐ 4.5 (Secunderabad) - "Best surprise gift ever!"</p>
         </div>
         
         <div class="product">
             <img src="date_setup.jpg" alt="Date Setup">
             <h3>Date Setup (₹4,999)</h3>
             <p>Your Home/Terrace Decor</p>
-            <button onclick="payNow('Date Setup', 10)">Pay Now</button>
+            <button onclick="payNow('Date Setup', 4999)">Pay Now</button>
+            <p class="review">⭐ 4.5 (Madhapur) - "Beautiful and romantic setup!"</p>
         </div>
         
         <div class="product">
             <img src="luxury_flower_box.jpg" alt="Luxury Flower Box">
             <h3>Luxury Flower Box (₹7,999)</h3>
             <p>Roses + Wine Glasses</p>
-            <button onclick="payNow('Luxury Flower Box', 10)">Pay Now</button>
+            <button onclick="payNow('Luxury Flower Box', 7999)">Pay Now</button>
+            <p class="review">⭐ 4.5 (Kondapur) - "Elegant and worth the price!"</p>
         </div>
         
         <div class="product">
             <img src="proposal_package.jpg" alt="Proposal Package">
             <h3>Proposal Package (₹15,000)</h3>
             <p>Decor + Music + Flowers + Cake</p>
-            <button onclick="payNow('Proposal Package', 10)">Pay Now</button>
+            <button onclick="payNow('Proposal Package', 15000)">Pay Now</button>
+            <p class="review">⭐ 4.5 (Gachibowli) - "Made my proposal magical!"</p>
         </div>
     </div>
 
     <a href="https://wa.me/8686147244" class="whatsapp-button">📩</a>
-
-    <div class="floating-hearts">
-        <div class="heart" style="left: 10%; animation-duration: 4s;"></div>
-        <div class="heart" style="left: 30%; animation-duration: 5s;"></div>
-        <div class="heart" style="left: 50%; animation-duration: 6s;"></div>
-        <div class="heart" style="left: 70%; animation-duration: 4.5s;"></div>
-        <div class="heart" style="left: 90%; animation-duration: 5.5s;"></div>
-    </div>
 
     <script>
         function payNow(product, amount) {
